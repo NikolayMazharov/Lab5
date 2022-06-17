@@ -47,7 +47,7 @@ public class MyVector {
     {
     double S_p=0;
     for (int i=0; i<data.length; i++)
-    	S_p+=Math.abs(data[i])*Math.abs(vector.data[i]);
+    	S_p+=data[i]*vector.data[i];
     return S_p;
     }
     
@@ -58,6 +58,25 @@ public class MyVector {
     		S+=data[i];
     	return S;
     }
+    
+    public double calculateMax()
+    {
+    	double max = data[0];
+    	for (int i=0; i<data.length; i++)
+    		if(data[i]>max)
+    			max=data[i];
+    	return max;
+    }
+    
+    public double calculateMin()
+    {
+    	double min = data[0];
+    	for (int i=0; i<data.length; i++)
+    		if(data[i]<min)
+    			min=data[i];
+    	return min;
+    }
+    
     
    
     
